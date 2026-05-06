@@ -1,0 +1,46 @@
+[
+  {
+    "account_id": "ACC1001",
+    "customer_id": "CUST001",
+    "account_type": "demand_deposit",
+    "current_balance": 1250000.75,
+    "currency": "INR",
+    "status": "active",
+    "branch_code": "MUM001",
+    "kyc_status": "verified",
+    "updated_at": "2026-04-30T18:30:00Z"
+  },
+  {
+    "account_id": "ACC1002",
+    "customer_id": "CUST002",
+    "account_type": "current_account",
+    "current_balance": 8940000,
+    "currency": "INR",
+    "status": "active",
+    "branch_code": "DEL014",
+    "kyc_status": "enhanced_due_diligence",
+    "updated_at": "2026-04-30T18:35:00Z"
+  },
+  {
+    "account_id": "ACC1003",
+    "customer_id": "CUST003",
+    "account_type": "savings",
+    "current_balance": 340500.2,
+    "currency": "INR",
+    "status": "active",
+    "branch_code": "BLR008",
+    "kyc_status": "verified",
+    "updated_at": "2026-04-30T18:40:00Z"
+  },
+  {
+    "account_id": "ACC1004",
+    "customer_id": "CUST004",
+    "account_type": "demand_deposit",
+    "current_balance": 0,
+    "currency": "INR",
+    "status": "frozen",
+    "branch_code": "HYD003",
+    "kyc_status": "pending_review",
+    "updated_at": "2026-04-30T18:45:00Z"
+  }
+]
