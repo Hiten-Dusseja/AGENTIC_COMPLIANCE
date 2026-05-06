@@ -1,0 +1,7 @@
+transaction_id,account_id,customer_id,posted_at,transaction_type,channel,amount,currency,risk_flag
+TXN90001,ACC1001,CUST001,2026-04-01T10:15:00Z,credit,upi,250000.00,INR,none
+TXN90002,ACC1002,CUST002,2026-04-03T14:45:00Z,debit,cash,1250000.00,INR,large_cash_withdrawal
+TXN90003,ACC1002,CUST002,2026-04-05T09:12:00Z,credit,rtgs,5100000.00,INR,high_value_transfer
+TXN90004,ACC1003,CUST003,2026-04-07T16:02:00Z,debit,atm,45000.00,INR,none
+TXN90005,ACC1004,CUST004,2026-04-08T11:20:00Z,debit,branch,900000.00,INR,frozen_account_activity
+TXN90006,ACC1001,CUST001,2026-04-15T08:55:00Z,debit,cash,780000.00,INR,large_cash_withdrawal

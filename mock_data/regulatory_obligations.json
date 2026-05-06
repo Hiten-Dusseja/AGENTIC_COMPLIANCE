@@ -1,0 +1,126 @@
+[
+  {
+    "id": "RBI_CRR_DAILY",
+    "name": "Daily Cash Reserve Ratio",
+    "domain": "core_banking",
+    "jurisdiction": "IN",
+    "reporting_frequency": "daily",
+    "required_sources": ["core_banking_accounts", "core_banking_transactions"],
+    "required_metrics": [
+      {
+        "metric_id": "total_demand_liabilities",
+        "description": "Total demand deposit balances at end of reporting period.",
+        "source": "core_banking_accounts",
+        "field_mapping": {
+          "account_id": "account_id",
+          "balance_amount": "current_balance",
+          "currency": "currency",
+          "liability_type": "account_type"
+        }
+      },
+      {
+        "metric_id": "large_cash_withdrawals",
+        "description": "Cash withdrawals above the internal threshold.",
+        "source": "core_banking_transactions",
+        "field_mapping": {
+          "transaction_id": "transaction_id",
+          "account_id": "account_id",
+          "amount": "amount",
+          "transaction_channel": "channel",
+          "transaction_date": "posted_at"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AML_SUSPICIOUS_ACTIVITY",
+    "name": "Suspicious Activity Monitoring",
+    "domain": "core_banking",
+    "jurisdiction": "IN",
+    "reporting_frequency": "event_driven",
+    "required_sources": ["core_banking_transactions", "data_warehouse_risk_events"],
+    "required_metrics": [
+      {
+        "metric_id": "high_risk_transactions",
+        "description": "Transactions flagged by AML monitoring rules.",
+        "source": "core_banking_transactions",
+        "field_mapping": {
+          "transaction_id": "transaction_id",
+          "customer_id": "customer_id",
+          "amount": "amount",
+          "risk_flag": "risk_flag",
+          "transaction_date": "posted_at"
+        }
+      },
+      {
+        "metric_id": "open_aml_cases",
+        "description": "Open risk events tied to AML scenarios.",
+        "source": "data_warehouse_risk_events",
+        "field_mapping": {
+          "case_id": "event_id",
+          "customer_id": "subject_id",
+          "severity": "severity",
+          "status": "status",
+          "detected_at": "detected_at"
+        }
+      }
+    ]
+  },
+  {
+    "id": "GST_VENDOR_TDS",
+    "name": "Vendor Tax Deducted at Source",
+    "domain": "erp",
+    "jurisdiction": "IN",
+    "reporting_frequency": "monthly",
+    "required_sources": ["erp_invoices"],
+    "required_metrics": [
+      {
+        "metric_id": "taxable_vendor_payments",
+        "description": "Paid vendor invoices with taxable amount and deducted tax.",
+        "source": "erp_invoices",
+        "field_mapping": {
+          "invoice_id": "invoice_id",
+          "vendor_id": "vendor_id",
+          "gross_amount": "gross_amount",
+          "tax_amount": "tax_amount",
+          "payment_status": "payment_status",
+          "invoice_date": "invoice_date"
+        }
+      }
+    ]
+  },
+  {
+    "id": "HIPAA_ACCESS_AUDIT",
+    "name": "Patient Record Access Audit",
+    "domain": "healthcare_emr",
+    "jurisdiction": "US",
+    "reporting_frequency": "monthly",
+    "required_sources": ["emr_encounters", "data_warehouse_risk_events"],
+    "required_metrics": [
+      {
+        "metric_id": "patient_record_accesses",
+        "description": "Clinical record accesses and encounter updates.",
+        "source": "emr_encounters",
+        "field_mapping": {
+          "encounter_id": "encounter_id",
+          "patient_id": "patient_id",
+          "provider_id": "provider_id",
+          "access_reason": "access_reason",
+          "accessed_at": "accessed_at"
+        }
+      },
+      {
+        "metric_id": "privacy_incidents",
+        "description": "Open healthcare privacy incidents.",
+        "source": "data_warehouse_risk_events",
+        "field_mapping": {
+          "incident_id": "event_id",
+          "patient_id": "subject_id",
+          "severity": "severity",
+          "status": "status",
+          "detected_at": "detected_at"
+        }
+      }
+    ]
+  }
+]

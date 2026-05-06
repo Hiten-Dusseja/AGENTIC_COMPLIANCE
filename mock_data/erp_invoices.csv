@@ -1,0 +1,6 @@
+invoice_id,vendor_id,vendor_name,invoice_date,due_date,gross_amount,tax_amount,currency,payment_status,cost_center
+INV70001,VEND101,Prakash Facilities,2026-04-02,2026-04-17,420000.00,42000.00,INR,paid,OPS-MUM
+INV70002,VEND102,Northstar Analytics,2026-04-09,2026-04-24,875000.00,87500.00,INR,approved,TECH-BLR
+INV70003,VEND103,MediCore Supplies,2026-04-12,2026-04-27,235000.00,23500.00,INR,paid,HEALTH-HYD
+INV70004,VEND104,Secure Transit Ltd,2026-04-18,2026-05-03,610000.00,61000.00,INR,disputed,OPS-DEL
+INV70005,VEND105,Blue Ledger Consulting,2026-04-26,2026-05-11,150000.00,15000.00,INR,paid,FIN-MUM

@@ -1,0 +1,38 @@
+[
+  {
+    "encounter_id": "ENC30001",
+    "patient_id": "PAT001",
+    "provider_id": "DR089",
+    "department": "cardiology",
+    "access_reason": "treatment",
+    "accessed_at": "2026-04-04T13:20:00Z",
+    "record_updated": true
+  },
+  {
+    "encounter_id": "ENC30002",
+    "patient_id": "PAT002",
+    "provider_id": "NUR144",
+    "department": "emergency",
+    "access_reason": "emergency_care",
+    "accessed_at": "2026-04-11T02:08:00Z",
+    "record_updated": true
+  },
+  {
+    "encounter_id": "ENC30003",
+    "patient_id": "PAT003",
+    "provider_id": "ADMIN022",
+    "department": "billing",
+    "access_reason": "billing_review",
+    "accessed_at": "2026-04-14T10:45:00Z",
+    "record_updated": false
+  },
+  {
+    "encounter_id": "ENC30004",
+    "patient_id": "PAT004",
+    "provider_id": "USR777",
+    "department": "unknown",
+    "access_reason": "unusual_after_hours_access",
+    "accessed_at": "2026-04-21T23:57:00Z",
+    "record_updated": false
+  }
+]

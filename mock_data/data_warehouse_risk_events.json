@@ -1,0 +1,38 @@
+[
+  {
+    "event_id": "RISK50001",
+    "domain": "aml",
+    "subject_id": "CUST002",
+    "severity": "high",
+    "status": "open",
+    "scenario": "rapid_movement_of_funds",
+    "detected_at": "2026-04-05T09:20:00Z"
+  },
+  {
+    "event_id": "RISK50002",
+    "domain": "aml",
+    "subject_id": "CUST004",
+    "severity": "critical",
+    "status": "open",
+    "scenario": "frozen_account_activity",
+    "detected_at": "2026-04-08T11:25:00Z"
+  },
+  {
+    "event_id": "RISK50003",
+    "domain": "privacy",
+    "subject_id": "PAT004",
+    "severity": "medium",
+    "status": "open",
+    "scenario": "after_hours_record_access",
+    "detected_at": "2026-04-22T00:05:00Z"
+  },
+  {
+    "event_id": "RISK50004",
+    "domain": "vendor_tax",
+    "subject_id": "VEND104",
+    "severity": "low",
+    "status": "closed",
+    "scenario": "invoice_dispute",
+    "detected_at": "2026-04-19T12:00:00Z"
+  }
+]
